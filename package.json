@@ -1,0 +1,22 @@
+{
+  "name": "responsive_web",
+  "version": "1.0.0",
+  "description": "this is a responsive web learnt from imooc.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HarrisChang/responsiveWeb.git"
+  },
+  "keywords": [
+    "responsive"
+  ],
+  "author": "harrischang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HarrisChang/responsiveWeb/issues"
+  },
+  "homepage": "https://github.com/HarrisChang/responsiveWeb#readme"
+}

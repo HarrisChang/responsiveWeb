@@ -1,2 +1,2 @@
 # responsiveWeb
-a responsive website
+this is a responsive website
