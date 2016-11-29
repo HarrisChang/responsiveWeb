@@ -1,0 +1,23 @@
+# editorconfig.org
+# 注释说明此文档为editorconfig文件
+
+root = true
+# 最顶层的配置文件，之后再不会查找其他文件
+
+[*]
+# 以下规则应用于所有文件
+charset = UTF-8
+#所有文件的编码格式为utf-8
+indent_style = space
+#代码缩进的样式为空格
+indent_size = 4
+#代码缩进的空格数为4
+insert_final_newline = true
+#每个文件以空白行结尾
+trim_trailing_whitespace = true
+#去除换行行首的空白字符
+
+[*.md]
+#以下规则应用于.md文件
+trim_trailing_whitespace = false
+#在.md文件中，不去除换行行首的空白字符
