@@ -26,8 +26,8 @@ gulp.task('stylesheets',['build-less'],function(){
     gulp.src(['./src/css/*.css','!./src/css/all.css','!./src/css/all.min.css'])
         .pipe(concat('all.css'))
         .pipe(gulp.dest('./src/css/'))
-        .pipe(rename({suffix : '.min'}))
         .pipe(cleancss())
+        .pipe(rename({suffix : '.min'}))
         .pipe(gulp.dest('./src/css'))
 });
 
@@ -49,24 +49,15 @@ gulp.task('clean',function(){
 });
 
 
-/* 设置默认事件 */
+/* 设置默认任务 */
 gulp.task('default',['buildLib','build-less'],function(){
+    //监听less目录下的所有less文件，包含子文件夹中的less文件，当less文件改变则执行build-less
+    gulp.watch('./src/less/**/*.less',['build-less']);
     console.log("gulp run");
 });
 
-
-//定义develop任务在开发中使用
-gulp.task('develop',['buildLib','build-less'],function(){
-    //监听less目录下的所有less文件，包含子文件夹中的less文件，当less文件改变则执行build-less
-    gulp.watch('./src/less/**/*.less',['build-less']);
-    console.log("developing");
+//定义一个prod任务作为运行或发布时使用
+gulp.task('prod',['clean','javascripts','stylesheets'],function(){
+    gulp.watch('./src/less/**/*.less',['stylesheets'])
+    console.log("任务开始运行");
 });
-
-
-//定义prod任务在发布或运行时使用
-gulp.task('prod',['clean','buildLib','build-less','javascripts','stylesheets'],function(){
-    console.log("project run");
-});
-
-
-
