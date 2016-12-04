@@ -11,6 +11,8 @@ var gulp = require('gulp'),  //基础库
 gulp.task('buildLib',function(){
     gulp.src('./node_modules/jquery/dist/jquery.min.js')
         .pipe(gulp.dest('./lib/js'));
+       /* .src('./node_modules/normalize.css/normalize.css')
+        .pipe(gulp.dest('./src/css'));*/
 });
 
 /* less解析 */
