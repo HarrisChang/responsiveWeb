@@ -5,11 +5,13 @@
 	<meta name="viewport"
 		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/main.css">
+    <!--build:css css/combined.css-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/owl.carousel.css">
-    <title>响应式开发</title>
-    <link rel="stylesheet" href="css/owl.theme.css">
+	<link rel="stylesheet" href="css/owl.theme.css">
+    <!--endbuild-->
+	<title>响应式开发</title>
 </head>
 <body>
 	<!--[if lte IE8]>
@@ -263,13 +265,16 @@
 		</ul>
         <p>某互联网金融公司 版权所有 &copy; 2016</p>
 	</footer>
-    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <!--build:js js/combined.js-->
+	<script src="js/jquery.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
+    <!--endbuild-->
     <script>
         $(".owl-carousel").owlCarousel({
             slideSpeed : 300,
             paginationSpeed : 400,
-            singleItem : true
+            singleItem : true,
+			autoPlay : 3000
         })
     </script>
 </body>
