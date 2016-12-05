@@ -30,10 +30,10 @@ li {
 }
 
 .text-right{
-  text-indent: right !important;
+  text-align: right !important;
 }
 .text-left{
-  text-indent: left !important;
+  text-align: left !important;
 }
 .text-center {
   text-align: center !important;
@@ -661,7 +661,7 @@ header .main ul li a.active{
 
 @media only screen and (max-width: 30em){
   .footer-content{
-    width: 90%；
+    width: 90%;
   }
   .footer-content ul{
     text-align: left;
