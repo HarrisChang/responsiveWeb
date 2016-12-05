@@ -292,8 +292,10 @@ header .main ul li a.active{
 
 
 /* 滚动广告 */
-.ad {
-  display: none;
+.item img{
+    display: block;
+    width: 100%;
+    height: auto;
 }
 /* 平台特点 */
 .feature {
